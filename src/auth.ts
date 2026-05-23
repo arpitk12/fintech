@@ -2,7 +2,11 @@ import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, User } from "firebase/auth";
 import firebaseConfig from "../firebase-applet-config.json";
 
-const app = initializeApp(firebaseConfig);
+// Safely retrieve client API Key from environment variable to keep configurations clean and secure
+const app = initializeApp({
+  ...firebaseConfig,
+  apiKey: (import.meta as any).env.VITE_FIREBASE_API_KEY || firebaseConfig.apiKey || ""
+});
 const auth = getAuth(app);
 
 const provider = new GoogleAuthProvider();
