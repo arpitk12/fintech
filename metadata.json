@@ -1,0 +1,6 @@
+{
+  "name": "Credit Card Expense & Budget Tracker",
+  "description": "Financial expense tracker with automated Gmail transaction syncing, intelligent machine learning categorization, customizable dashboards, and offline capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

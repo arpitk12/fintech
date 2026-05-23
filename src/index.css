@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;650;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom override of Tailwind Colors to support dynamic dark mode */
+  --color-slate-50: var(--slate-50);
+  --color-slate-100: var(--slate-100);
+  --color-slate-200: var(--slate-200);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-550: var(--slate-550);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-slate-800: var(--slate-800);
+  --color-slate-900: var(--slate-900);
+  --color-slate-950: var(--slate-950);
+  --color-white: var(--white);
+
+  --color-blue-50: var(--blue-50);
+  --color-blue-600: var(--slate-blue);
+  
+  --color-emerald-50: var(--emerald-50);
+  --color-emerald-600: var(--emerald-600);
+  --color-emerald-700: var(--emerald-700);
+
+  --color-rose-50: var(--rose-50);
+  --color-rose-600: var(--rose-600);
+  --color-rose-700: var(--rose-700);
+
+  --color-amber-50: var(--amber-50);
+  --color-amber-800: var(--amber-800);
+}
+
+:root {
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-550: #475569;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+  --white: #ffffff;
+
+  --blue-50: #eff6ff;
+  --slate-blue: #2563eb;
+  
+  --emerald-50: #ecfdf5;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+
+  --rose-50: #fff1f2;
+  --rose-600: #e11d48;
+  --rose-700: #be123c;
+
+  --amber-50: #fffbeb;
+  --amber-800: #92400e;
+}
+
+.dark {
+  --slate-50: #0b0f19;       /* Deep budgeting dark theme bg */
+  --white: #121824;          /* Elegant deep card elements */
+  --slate-100: #1a2232;      /* Secondary background */
+  --slate-200: #222d3d;      /* Solid boundaries and grids */
+  --slate-300: #3d4a5e;      /* Distinct accent borders */
+  --slate-400: #647791;      /* Muted details and descriptions */
+  --slate-500: #8ba0ba;      /* Secondary and helper text */
+  --slate-550: #9fb3cc;      /* Highlighted metadata labels */
+  --slate-600: #a9bed6;      /* High contrast secondary details */
+  --slate-700: #cbd9ea;      /* Accessible subheaders */
+  --slate-800: #e2ecf7;      /* Clean general readable copy */
+  --slate-900: #f1f5f9;      /* Strong visual heading callouts */
+  --slate-950: #f8fafc;      /* Absolute accent contrasts */
+
+  --blue-50: rgba(37, 99, 235, 0.15);
+  --slate-blue: #3b82f6;
+
+  --emerald-50: rgba(16, 185, 129, 0.12);
+  --emerald-600: #34d399;
+  --emerald-700: #10b981;
+
+  --rose-50: rgba(244, 63, 94, 0.12);
+  --rose-600: #fb7185;
+  --rose-700: #f43f5e;
+
+  --amber-50: rgba(245, 158, 11, 0.12);
+  --amber-800: #f59e0b;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased font-sans transition-colors duration-250 ease-out;
+}
+
+/* Custom scrollbars styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
